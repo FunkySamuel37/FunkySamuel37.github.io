@@ -16,7 +16,7 @@ gulp.task('copy', function() {
 
 gulp.task('watch', function() {
   gulp.watch(['*.html'], ['copy']);
-  gulp.watch(['styles/*.css'], ['sass']);
+  gulp.watch(['styles/*.scss'], ['sass']);
 })
 
 gulp.task('default', ['sass', 'copy', 'watch']);

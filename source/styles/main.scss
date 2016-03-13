@@ -1,4 +1,44 @@
+$primary-color-dark:   #455A64;
+$primary-color:        #607D8B;
+$primary-color-light:  #CFD8DC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF5252;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+
 body {
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  color: $primary-text-color;
+}
+
+.app-wrap {
+  height: 100vh;
   display: flex;
-  background-color: mistyrose;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: $primary-color;
+  height: 80px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-top: 15px solid $primary-color-dark;
+  padding: auto auto;
+  flex-shrink: 0;//让自动缩小宽度失效
+}
+
+.content {
+  background-color: #fafafa;
+  line-height: 1.8;
+  padding: 16px;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+.app-footer {
+  height: 30px;
+  background-color: $primary-color;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+  flex-shrink: 0;
 }
