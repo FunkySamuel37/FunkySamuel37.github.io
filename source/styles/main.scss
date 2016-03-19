@@ -88,5 +88,12 @@ a {
       font-size: 25px;
       padding-bottom: 10px;
     }
+    &:hover {
+      border-bottom: 4px solid $accent-color;
+    }
+  }
+
+  a.active {
+    border-bottom: 4px solid $accent-color;
   }
 }

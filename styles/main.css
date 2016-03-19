@@ -90,3 +90,7 @@ a {
       color: #FFFFFF;
       font-size: 25px;
       padding-bottom: 10px; }
+    .app-footer a:hover {
+      border-bottom: 4px solid #FFC108; }
+  .app-footer a.active {
+    border-bottom: 4px solid #FFC108; }
