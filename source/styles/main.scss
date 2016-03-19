@@ -97,3 +97,54 @@ a {
     border-bottom: 4px solid $accent-color;
   }
 }
+
+.sidebar {
+  display: none;
+  background-color: $primary-color;
+  width: 300px;
+
+  h1 {
+    margin: 0;
+    padding: 20px;
+    color: $primary-color-text;
+    text-align: center;
+    border-bottom: 2px solid $accent-color;
+  }
+  a {
+    display: flex;
+    padding: 20px;
+    color: $primary-color-light;
+    font-size: 18px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    i {
+      display: inline-block;
+      text-shadow: 3px 3px 0 $primary-color-dark;
+      color: $primary-color-text;
+      margin-right: 10px;
+    }
+  }
+
+  a.active {
+    color: $accent-color;    i {
+      color: $accent-color;
+    }
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+@media (min-width: 800px) {
+  .app-wrap {
+    flex-direction: row;
+  }
+  .app-header, .app-footer {
+    display: none ;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
