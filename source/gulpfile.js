@@ -38,7 +38,7 @@ gulp.task('cp', function() {
 gulp.task('watch', function() {
   gulp.watch(['**/*.html'], ['rebuild']);
   gulp.watch(['styles/*.scss'], ['sass']);
-  gulp.watch(['js/*.js'], ['cp']);
+  gulp.watch(['js/*.js', 'assets/*'], ['cp']);
 });
 
 gulp.task('browserSync', ['build', 'sass', 'cp'], function() {

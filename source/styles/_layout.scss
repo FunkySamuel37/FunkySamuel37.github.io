@@ -21,7 +21,7 @@
   }
   .button {
     //  background: rgba(0, 0, 0, 0.1);
-    background-color: $accent-color;
+    background-color: $primary-color-light;
     color: primary-color-text;
     padding: 10px 15px;
     border-radius: 4px;
@@ -35,9 +35,11 @@
 .content {
   background-color: #fafafa;
   line-height: 1.8;
-  padding: 16px;
   overflow-y: scroll;
   flex-grow: 1;
+
+  padding: 0;
+  position: relative;
 }
 
 .app-footer {
