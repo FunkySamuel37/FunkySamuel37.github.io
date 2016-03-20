@@ -30,19 +30,18 @@ gulp.task('rebuild', ['build'], function() {
   reload();
 })
 
-gulp.task('copyjs', function() {
-  gulp.src('js/**/*.js', {base: '.'})
-    .pipe(gulp.dest('..'))
-    .pipe(reload({stream: true}));
+gulp.task('cp', function() {
+  gulp.src(['js/**/*.js', 'assets/*'], {base: '.'})
+    .pipe(gulp.dest('..'));
 })
 
 gulp.task('watch', function() {
   gulp.watch(['**/*.html'], ['rebuild']);
   gulp.watch(['styles/*.scss'], ['sass']);
-  gulp.watch(['js/*.js'], ['copyjs']);
+  gulp.watch(['js/*.js'], ['cp']);
 });
 
-gulp.task('browserSync', ['build', 'sass', 'copyjs'], function() {
+gulp.task('browserSync', ['build', 'sass', 'cp'], function() {
   browserSync({server: {
     baseDir: '../'
   }});
